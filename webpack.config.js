@@ -25,8 +25,10 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./CardDetails" : "/src/components/CardDetails.jsx",
-        "./CardShort": "/src/components/CardShort.jsx"
-      }
+        // "./CardShort": "/src/components/CardShort.jsx"
+      },
+      shared: ["react", "react-dom"]
+
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
