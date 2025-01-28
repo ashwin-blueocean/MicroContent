@@ -6,6 +6,9 @@ const {ModuleFederationPlugin} = require("webpack").container;
 
 module.exports = {
   mode: "development",
+   optimization: {
+      splitChunks: false,  // Disable splitChunks
+    },
   entry: path.resolve(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, ".dist"),
